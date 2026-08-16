@@ -15,9 +15,7 @@ const products = [
     reviews: 456,
     description:
       "A comfortable and stylish T-shirt with premium cotton fabric and modern tape details.",
-    image: [
-      "/assets/product/t-shirt-2.jpeg"
-    ],
+    image: ["/asstes/product/t-shirt-2.jpeg"],
     colors: ["#111111", "#FFFFFF", "#556B2F"],
     sizes: ["Small", "Medium", "Large", "X-Large"],
     stock: 50,
@@ -34,9 +32,7 @@ const products = [
     reviews: 320,
     description:
       "Modern skinny fit jeans designed for a comfortable and stylish everyday look.",
-    image: [
-      "/assets/product/t-shirt-4.jpeg"
-    ],
+    image: ["/asstes/product/t-shirt-4.jpeg"],
     colors: ["#1F2937", "#374151"],
     sizes: ["Small", "Medium", "Large", "X-Large"],
     stock: 35,
@@ -53,9 +49,7 @@ const products = [
     reviews: 410,
     description:
       "Classic checkered shirt made with comfortable fabric for everyday wear.",
-    image: [
-      "/assets/product/t-shirt-2.jpeg"
-    ],
+    image: ["/asstes/product/t-shirt-2.jpeg"],
     colors: ["#991B1B", "#111827"],
     sizes: ["Small", "Medium", "Large", "X-Large"],
     stock: 40,
@@ -72,9 +66,7 @@ const products = [
     reviews: 250,
     description:
       "A casual striped T-shirt with a clean and modern design.",
-    image: [
-      "/assets/product/t-shirt-4.jpeg"
-    ],
+    image: ["/asstes/product/t-shirt-4.jpeg"],
     colors: ["#111111", "#FFFFFF"],
     sizes: ["Small", "Medium", "Large", "X-Large"],
     stock: 45,
@@ -91,9 +83,7 @@ const products = [
     reviews: 300,
     description:
       "Vertical striped shirt with a relaxed and fashionable design.",
-    image: [
-      "/assets/product/t-shirt-2.jpeg"
-    ],
+    image: ["/asstes/product/t-shirt-2.jpeg"],
     colors: ["#556B2F", "#FFFFFF"],
     sizes: ["Small", "Medium", "Large", "X-Large"],
     stock: 30,
@@ -110,9 +100,7 @@ const products = [
     reviews: 220,
     description:
       "Graphic T-shirt featuring a bold casual design.",
-    image: [
-      "/assets/product/t-shirt-4.jpeg"
-    ],
+    image: ["/asstes/product/t-shirt-4.jpeg"],
     colors: ["#F97316", "#111111"],
     sizes: ["Small", "Medium", "Large", "X-Large"],
     stock: 25,
@@ -129,9 +117,7 @@ const products = [
     reviews: 180,
     description:
       "Comfortable loose-fit Bermuda shorts for casual everyday wear.",
-    image: [
-      "/assets/product/t-shirt-2.jpeg"
-    ],
+    image: ["/asstes/product/t-shirt-2.jpeg"],
     colors: ["#2563EB", "#111111"],
     sizes: ["Small", "Medium", "Large", "X-Large"],
     stock: 28,
@@ -148,9 +134,7 @@ const products = [
     reviews: 390,
     description:
       "Faded skinny jeans with a modern fit and comfortable feel.",
-    image: [
-      "/assets/product/t-shirt-3.jpeg"
-    ],
+    image: ["/asstes/product/t-shirt-3.jpeg"],
     colors: ["#1E3A5F"],
     sizes: ["Small", "Medium", "Large", "X-Large"],
     stock: 32,
