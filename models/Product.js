@@ -4,34 +4,30 @@ const productSchema = new mongoose.Schema(
   {
     name: {
       type: String,
-      required: [true, "Product name is required"],
+      required: true,
       trim: true,
-      minlength: 2,
-      maxlength: 150,
     },
 
     category: {
       type: String,
-      required: [true, "Category is required"],
+      required: true,
       trim: true,
     },
 
     price: {
       type: Number,
-      required: [true, "Price is required"],
-      min: [0, "Price cannot be negative"],
+      required: true,
+      min: 0,
     },
 
     oldPrice: {
       type: Number,
       default: null,
-      min: [0, "Old price cannot be negative"],
     },
 
     discount: {
-      type: String,
-      default: "",
-      trim: true,
+      type: Number,
+      default: null,
     },
 
     rating: {
@@ -44,14 +40,11 @@ const productSchema = new mongoose.Schema(
     reviews: {
       type: Number,
       default: 0,
-      min: 0,
     },
 
     description: {
       type: String,
       default: "",
-      trim: true,
-      maxlength: 2000,
     },
 
     image: {
@@ -85,6 +78,9 @@ const productSchema = new mongoose.Schema(
   }
 );
 
-const Product = mongoose.model("Product", productSchema);
+const Product = mongoose.model(
+  "Product",
+  productSchema
+);
 
 export default Product;
