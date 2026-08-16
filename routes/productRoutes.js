@@ -4,25 +4,30 @@ import {
   getProducts,
   getProductById,
   createProduct,
+  updateProduct,
   deleteProduct,
 } from "../controllers/productController.js";
 
 const router = express.Router();
 
 
-// GET /api/products
+// GET all products
 router.get("/", getProducts);
 
 
-// GET /api/products/:id
+// GET single product
 router.get("/:id", getProductById);
 
 
-// POST /api/products
+// CREATE product
 router.post("/", createProduct);
 
 
-// DELETE /api/products/:id
+// UPDATE product
+router.put("/:id", updateProduct);
+
+
+// DELETE product
 router.delete("/:id", deleteProduct);
 
 
