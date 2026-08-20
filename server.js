@@ -9,26 +9,27 @@ dotenv.config();
 
 const app = express();
 
-
-// =====================================================
-// DATABASE
-// =====================================================
-
-connectDB();
-
-
 // =====================================================
 // MIDDLEWARE
 // =====================================================
 
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: [
+      "http://localhost:5173",
+      "https://YOUR-FRONTEND.vercel.app",
+    ],
+    credentials: true,
   })
 );
 
 app.use(express.json());
 
+// =====================================================
+// DATABASE
+// =====================================================
+
+connectDB();
 
 // =====================================================
 // ROUTES
@@ -41,12 +42,7 @@ app.get("/", (req, res) => {
   });
 });
 
-
-app.use(
-  "/api/products",
-  productRoutes
-);
-
+app.use("/api/products", productRoutes);
 
 // =====================================================
 // 404
@@ -59,39 +55,22 @@ app.use((req, res) => {
   });
 });
 
-
 // =====================================================
 // ERROR HANDLER
 // =====================================================
 
-app.use(
-  (error, req, res, next) => {
+app.use((error, req, res, next) => {
+  console.error("Server Error:", error);
 
-    console.error(
-      "Server Error:",
-      error
-    );
-
-    res.status(500).json({
-      success: false,
-      message: "Internal server error",
-    });
-
-  }
-);
-
-
-// =====================================================
-// SERVER
-// =====================================================
-
-const PORT =
-  process.env.PORT || 5000;
-
-app.listen(PORT, () => {
-
-  console.log(
-    `Backend running on http://localhost:${PORT}`
-  );
-
+  res.status(500).json({
+    success: false,
+    message: "Internal server error",
+    error: error.message,
+  });
 });
+
+// =====================================================
+// VERCEL
+// =====================================================
+
+export default app;
