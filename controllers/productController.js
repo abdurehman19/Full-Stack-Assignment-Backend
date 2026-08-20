@@ -84,17 +84,14 @@ export const getProducts = async (req, res) => {
     });
 
   } catch (error) {
+  console.error("Get Products Error:", error);
 
-    console.error(
-      "Get Products Error:",
-      error.message
-    );
-
-    res.status(500).json({
-      success: false,
-      message: "Failed to fetch products",
-    });
-  }
+  res.status(500).json({
+    success: false,
+    message: "Failed to fetch products",
+    error: error.message,
+  });
+}
 };
 
 
