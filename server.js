@@ -17,7 +17,7 @@ app.use(
   cors({
     origin: [
       "http://localhost:5173",
-      "https://YOUR-FRONTEND.vercel.app",
+      "https://full-stack-assignment.vercel.app",
     ],
     credentials: true,
   })
