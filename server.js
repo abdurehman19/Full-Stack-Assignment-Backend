@@ -17,7 +17,7 @@ app.use(
   cors({
     origin: [
       "http://localhost:5173",
-      "https://full-stack-assignment.vercel.app",
+      "https://full-stack-assigement-ole5-mod3b9f80.vercel.app",
     ],
     credentials: true,
   })
