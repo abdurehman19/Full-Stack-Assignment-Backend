@@ -13,16 +13,7 @@ const app = express();
 // MIDDLEWARE
 // =====================================================
 
-app.use(
-  cors({
-    origin: [
-      "http://localhost:5173",
-      "https://full-stack-assigement-ole5-mod3b9f80.vercel.app",
-    ],
-    credentials: true,
-  })
-);
-
+app.use(cors());
 app.use(express.json());
 
 // =====================================================
@@ -68,9 +59,5 @@ app.use((error, req, res, next) => {
     error: error.message,
   });
 });
-
-// =====================================================
-// VERCEL
-// =====================================================
 
 export default app;
